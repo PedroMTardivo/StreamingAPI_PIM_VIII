@@ -2,11 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "StreamingApi.Api/StreamingApi.Api.csproj",
-      "use": "@vercel/dotnet@2.0.0",
-      "config": {
-        "outputDirectory": "StreamingApi.Api/bin/Release/net8.0/publish"
-      }
+      "src": "StreamingApi.Api.csproj",
+      "use": "@vercel/dotnet@3.0.0"
     }
   ],
   "routes": [
