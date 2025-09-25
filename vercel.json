@@ -2,8 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "StreamingApi.Api.csproj",
-      "use": "@vercel/dotnet"
+      "src": "StreamingApi.Api/StreamingApi.Api.csproj",
+      "use": "@vercel/dotnet@2.0.0"
     }
   ],
   "routes": [
