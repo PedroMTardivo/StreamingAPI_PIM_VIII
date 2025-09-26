@@ -4,16 +4,39 @@ API REST para gerenciamento de conteúdo de streaming, desenvolvida em C# com .N
 
 Sistema construído para o PIM VIII
 
-## 🚀 Deploy na Vercel
+## 🚀 Como Executar
 
-Esta API está configurada para ser hospedada na Vercel:
+### Pré-requisitos
+- .NET 8.0 SDK instalado
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/SEU_USUARIO/streaming-api)
+### Passos para executar:
 
-### URL da API em produção:
+#### Opção 1: Comando direto
+```bash
+# 1. Clone o repositório
+git clone https://github.com/PedroMTardivo/StreamingAPI_PIM_VIII.git
+cd StreamingAPI_PIM_VIII
+
+# 2. Execute a API
+dotnet run --project StreamingApi.Api.csproj --urls http://localhost:5011
 ```
-https://streaming-api-xxx.vercel.app
+
+#### Opção 2: Scripts (mais fácil!)
+```bash
+# Linux/Mac
+./run.sh
+
+# Windows
+run.bat
 ```
+
+### ✅ Pronto!
+A API estará rodando em: **http://localhost:5011**
+
+### Teste no navegador:
+- Health check: http://localhost:5011/
+- API endpoints: http://localhost:5011/api/criadores
+- Swagger UI: http://localhost:5011/swagger
 
 ## 📋 Endpoints Disponíveis
 
@@ -58,28 +81,21 @@ https://streaming-api-xxx.vercel.app
 - **Swagger/OpenAPI** - Documentação da API
 - **Vercel** - Hospedagem
 
-## 📦 Instalação Local
+## 🔧 Comandos Úteis
 
-### Pré-requisitos
-- .NET 8.0 SDK
-
-### Executar localmente
 ```bash
-# Clone o repositório
-git clone <url-do-repositorio>
-cd streaming-api
+# Build do projeto
+dotnet build StreamingApi.Api.csproj
 
-# Restaure as dependências
-dotnet restore
+# Executar em modo desenvolvimento
+dotnet run --project StreamingApi.Api.csproj
 
-# Execute a API
-dotnet run
+# Executar em porta específica
+dotnet run --project StreamingApi.Api.csproj --urls http://localhost:5011
+
+# Limpar e rebuildar
+dotnet clean && dotnet build StreamingApi.Api.csproj
 ```
-
-A API estará disponível em `http://localhost:5011`
-
-### Documentação da API
-- Swagger UI: `http://localhost:5011/swagger`
 
 ## 🗄️ Banco de Dados
 
