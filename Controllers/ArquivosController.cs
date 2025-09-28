@@ -21,7 +21,11 @@ namespace StreamingApi.Api.Controllers
         {
             _db = db;
             _environment = environment;
-            _uploadsPath = Path.Combine(_environment.ContentRootPath, "uploads");
+            
+            // Use /tmp for Render deployment, local uploads for development
+            _uploadsPath = _environment.IsProduction() 
+                ? Path.Combine("/tmp", "uploads")
+                : Path.Combine(_environment.ContentRootPath, "uploads");
             
             if (!Directory.Exists(_uploadsPath))
             {

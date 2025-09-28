@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: streaming-api-pim-viii
+    env: dotnet
+    buildCommand: dotnet publish StreamingApi.Api.csproj -c Release -o ./publish
+    startCommand: dotnet ./publish/StreamingApi.Api.dll
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:$PORT
+    healthCheckPath: /health
+    disk:
+      name: uploads
+      mountPath: /app/uploads
+      sizeGB: 1

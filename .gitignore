@@ -56,8 +56,14 @@ uploads/
 # Vercel
 .vercel
 
+# Render
+.render
+
 # Node modules (if using any Node.js tools)
 node_modules/
+
+# Docker
+.docker/
 
 # Logs
 *.log
