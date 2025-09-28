@@ -4,6 +4,23 @@ API REST para gerenciamento de conteúdo de streaming, desenvolvida em C# com .N
 
 Sistema construído para o PIM VIII
 
+## 🌐 **API Online**
+
+**🚀 URL da API em Produção:**
+```
+https://streamingapi-pim-viii.onrender.com
+```
+
+**📚 Documentação Swagger:**
+```
+https://streamingapi-pim-viii.onrender.com/swagger
+```
+
+**❤️ Health Check:**
+```
+https://streamingapi-pim-viii.onrender.com/health
+```
+
 ## 🚀 Como Executar
 
 ### Pré-requisitos
@@ -79,7 +96,7 @@ A API estará rodando em: **http://localhost:5011**
 - **Entity Framework Core** - ORM para banco de dados
 - **SQLite** - Banco de dados
 - **Swagger/OpenAPI** - Documentação da API
-- **Vercel** - Hospedagem
+- **Render** - Hospedagem em produção
 
 ## 🔧 Comandos Úteis
 
@@ -101,7 +118,7 @@ dotnet clean && dotnet build StreamingApi.Api.csproj
 
 A API usa SQLite como banco de dados:
 - **Desenvolvimento**: `streaming.db` (local)
-- **Produção**: `/tmp/streaming.db` (Vercel)
+- **Produção**: `/tmp/streaming.db` (Render)
 
 O banco é criado automaticamente na primeira execução.
 
@@ -130,28 +147,29 @@ StreamingApi/
 
 ### Exemplo: Criar um criador
 ```bash
-curl -X POST "https://sua-api.vercel.app/api/criadores" \
+curl -X POST "https://streamingapi-pim-viii.onrender.com/api/criadores" \
      -H "Content-Type: application/json" \
      -d '{"nome": "Criador Teste"}'
 ```
 
 ### Exemplo: Listar criadores
 ```bash
-curl "https://sua-api.vercel.app/api/criadores"
+curl "https://streamingapi-pim-viii.onrender.com/api/criadores"
 ```
 
 ## 🐛 Solução de Problemas
 
 ### API não responde
-- Verifique se o deploy foi bem-sucedido na Vercel
-- Consulte os logs na dashboard da Vercel
+- Verifique se o deploy foi bem-sucedido no Render
+- Consulte os logs na dashboard do Render
+- A API pode estar "dormindo" (plano gratuito) - aguarde 30s na primeira requisição
 
 ### Erro de CORS
 - A API está configurada para aceitar qualquer origem
 - Verifique se o cliente está usando a URL correta
 
 ### Banco de dados
-- Na Vercel, o banco é recriado a cada deploy
+- No Render, o banco é recriado a cada deploy
 - Para dados persistentes, considere usar um banco externo
 
 ## 📝 Licença
@@ -164,7 +182,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para de
 - ✅ API REST completa para streaming
 - ✅ CRUD para criadores, conteúdos, usuários e playlists
 - ✅ Upload e download de arquivos
-- ✅ Deploy automatizado na Vercel
+- ✅ Deploy automatizado no Render
 - ✅ CORS configurado para clientes
 
 ---

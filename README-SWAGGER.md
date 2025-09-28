@@ -9,7 +9,7 @@ http://localhost:5011/swagger
 
 ### Produção:
 ```
-https://sua-api.com/swagger
+https://streamingapi-pim-viii.onrender.com/swagger
 ```
 
 ## 📋 Funcionalidades da Documentação

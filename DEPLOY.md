@@ -48,9 +48,13 @@ ASPNETCORE_URLS=http://0.0.0.0:$PORT
 
 ## 🌐 **URLs Após Deploy:**
 
-- **API**: `https://streaming-api-pim-viii.onrender.com`
-- **Swagger**: `https://streaming-api-pim-viii.onrender.com/swagger`
-- **Health Check**: `https://streaming-api-pim-viii.onrender.com/health`
+- **API**: `https://streamingapi-pim-viii.onrender.com`
+- **Swagger**: `https://streamingapi-pim-viii.onrender.com/swagger`
+- **Health Check**: `https://streamingapi-pim-viii.onrender.com/health`
+
+## ✅ **Deploy Concluído com Sucesso!**
+
+Sua API está online e funcionando perfeitamente!
 
 ## 📁 **Estrutura de Arquivos:**
 
@@ -71,21 +75,21 @@ StreamingApi_Repo/
 
 ### **1. Teste Health Check:**
 ```bash
-curl https://sua-api.onrender.com/health
+curl https://streamingapi-pim-viii.onrender.com/health
 ```
 
 ### **2. Teste Swagger:**
 ```
-https://sua-api.onrender.com/swagger
+https://streamingapi-pim-viii.onrender.com/swagger
 ```
 
 ### **3. Teste Endpoints:**
 ```bash
 # Listar criadores
-curl https://sua-api.onrender.com/api/criadores
+curl https://streamingapi-pim-viii.onrender.com/api/criadores
 
 # Criar criador
-curl -X POST https://sua-api.onrender.com/api/criadores \
+curl -X POST https://streamingapi-pim-viii.onrender.com/api/criadores \
   -H "Content-Type: application/json" \
   -d '{"nome": "Teste Render"}'
 ```
