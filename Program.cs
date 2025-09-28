@@ -18,7 +18,7 @@ builder.Services.AddSwaggerGen(c =>
     {
         Title = "Streaming API",
         Version = "v1.0",
-        Description = "API REST para gerenciamento de conteúdo de streaming - PIM VIII (OBS: Não consegui fazer deploy em algum lusgar, vou deixar um notebook ligado rodando a API até o dia 10/10)",
+        Description = "API REST para gerenciamento de conteúdo de streaming - PIM VIII",
         Contact = new OpenApiContact
         {
             Name = "Pedro Tardivo",
@@ -111,4 +111,5 @@ app.MapGet("/health", () => new
 }).WithName("DetailedHealthCheck").WithTags("Health");
 
 app.Run();
+
 
